@@ -140,6 +140,14 @@ function App() {
             </p>
           </div>
 
+          <a
+            href="https://claude.ai"
+            target="_blank"
+            className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          >
+           Go to Claude AI 
+          </a>
+
           <input
             type="text"
             className="py-3 px-4 bg-slate-50 block w-1/2 rounded-md text-sm border border-transparent outline-none focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white"
