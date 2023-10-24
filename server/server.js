@@ -102,7 +102,7 @@ app.post('/merge-markdown', async (req, res) => {
     res.setHeader('Content-Disposition', 'attachment; filename=merged.md');
     res.send(mergedMarkdownBuffer);
   } catch (error) {
-    res.status(500).send({ error: 'An error occurred while merging Markdown files.' });
+    res.status(500).send({ error: `An error occurred while merging Markdown files. ${error}` });
   }
 });
 

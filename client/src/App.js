@@ -20,7 +20,7 @@ function App() {
       setDownloadProgress(true);
 
       // Make a POST request to the API with the repo URL
-      const response = await fetch("http://localhost:5000/merge-markdown", {
+      const response = await fetch("https://git-hub-docs-server.onrender.com/merge-markdown", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
