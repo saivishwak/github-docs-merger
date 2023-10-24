@@ -1,6 +1,8 @@
 import "./App.css";
 import { useRef, useState } from "react";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 function App() {
   const inputRef = useRef(null);
   const [downloadinProggress, setDownloadProgress] = useState(false);
@@ -20,7 +22,7 @@ function App() {
       setDownloadProgress(true);
 
       // Make a POST request to the API with the repo URL
-      const response = await fetch("https://git-hub-docs-server.onrender.com/merge-markdown", {
+      const response = await fetch(`${baseUrl}/merge-markdown`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +57,7 @@ function App() {
   };
 
   return (
-    <div className="bg-slate-900 h-screen w-screen flex flex-col justify-center items-center text-center">
+    <div className="bg-slate-900 h-screen w-screen flex flex-col justify-center items-center text-center overscroll-none">
       <div className="bg-gradient-to-b from-violet-600/[.15] via-transparent flex-grow w-full justify-center items-center text-center">
         <div className="flex flex-col max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8 items-center text-center justify-center">
           {showAlert ? (
